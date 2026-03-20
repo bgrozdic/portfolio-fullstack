@@ -11,3 +11,27 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Experience {
+  id          String    @id @default(uuid())
+  title       String
+  type        String?
+  description String?
+  startDate   DateTime?
+  endDate     DateTime?
+  techStack   String?
+  createdAt   DateTime  @default(now())
+}
+
+model Skill {
+  id         String   @id @default(uuid())
+  name       String
+  isFavorite Boolean  @default(false)
+  orderIndex Int?
+  createdAt  DateTime @default(now())
+}
+
+model About {
+  id      String @id @default(uuid())
+  content String
+}
