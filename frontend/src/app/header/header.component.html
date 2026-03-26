@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <button matIconButton class="example-icon">
+    <mat-icon matTooltip="Home">home</mat-icon>
+  </button>
+  <span>Portfolio-fullstack</span>
+  <span class="example-spacer"></span>
+  <a target="_blank" href="https://www.linkedin.com/in/borisz-grozdic/" matIconButton>
+    <mat-icon matTooltip="Linkedin">link</mat-icon>
+  </a>
+  <a target="_blank" href="https://github.com/bgrozdic/portfolio-fullstack/" matIconButton>
+    <mat-icon matTooltip="Github">share</mat-icon>
+  </a>
+
+  <p><mat-slide-toggle (change)="toggleTheme()" matTooltip="Dark mode"></mat-slide-toggle></p>
+</mat-toolbar>
