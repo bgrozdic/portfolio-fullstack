@@ -1,21 +1,20 @@
-<router-outlet>
-  <mat-grid-list cols="12" gutterSize="12px">
-    <!-- Header -->
-    <app-header></app-header>
+<mat-grid-list cols="12" rowHeight="1:2" gutterSize="12px">
+  <!-- Header -->
+  <mat-grid-tile-header colspan="12" rowspan="1"> <app-header /> </mat-grid-tile-header>
 
-    <!-- Profile -->
-    <mat-grid-tile colspan="3" rowspan="2"> Profile picture comp </mat-grid-tile>
+  <!-- Profile picture -->
+  <mat-grid-tile colspan="3" rowspan="2"><app-profile-picture /></mat-grid-tile>
 
-    <!-- About -->
-    <mat-grid-tile colspan="9" rowspan="2"> About me </mat-grid-tile>
+  <!-- About -->
+  <mat-grid-tile colspan="9" rowspan="2"> About me </mat-grid-tile>
 
-    <!-- Timeline experience -->
-    <mat-grid-tile colspan="12" rowspan="3"> Experience timeline </mat-grid-tile>
+  <!-- Timeline experience -->
+  <mat-grid-tile colspan="12" rowspan="3"> Experience timeline </mat-grid-tile>
 
-    <!-- Skills  -->
-    <mat-grid-tile colspan="12" rowspan="2"> Your own skills </mat-grid-tile>
+  <!-- Skills  -->
+  <mat-grid-tile colspan="12" rowspan="2"> Your own skills </mat-grid-tile>
 
-    <!-- Footer -->
-    <mat-grid-tile colspan="12"> Footer comp </mat-grid-tile>
-  </mat-grid-list>
-</router-outlet>
+  <!-- Footer -->
+  <mat-grid-tile colspan="12"> Footer comp </mat-grid-tile>
+</mat-grid-list>
+<router-outlet> </router-outlet>
