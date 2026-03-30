@@ -1,20 +1,45 @@
-<mat-grid-list cols="12" rowHeight="1:2" gutterSize="12px">
+<div class="container-fluid text-center">
   <!-- Header -->
-  <mat-grid-tile-header colspan="12" rowspan="1"> <app-header /> </mat-grid-tile-header>
+  <div class="row">
+    <div class="col-12">
+      <app-header />
+    </div>
+  </div>
 
-  <!-- Profile picture -->
-  <mat-grid-tile colspan="3" rowspan="2"><app-profile-picture /></mat-grid-tile>
+  <div class="row">
+    <!-- Profile -->
+    <div class="col-4 align-content-center">
+      <app-profile-picture />
+    </div>
+    <!-- About -->
+    <div class="col-8">
+      <app-about />
+    </div>
+  </div>
 
-  <!-- About -->
-  <mat-grid-tile colspan="9" rowspan="2"> About me </mat-grid-tile>
+  <!-- Experience -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <!-- <app-experience></app-experience> -->
+      experience
+    </div>
+  </div>
 
-  <!-- Timeline experience -->
-  <mat-grid-tile colspan="12" rowspan="3"> Experience timeline </mat-grid-tile>
-
-  <!-- Skills  -->
-  <mat-grid-tile colspan="12" rowspan="2"> Your own skills </mat-grid-tile>
+  <!-- Skills -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <!-- <app-skills></app-skills> -->
+      skills
+    </div>
+  </div>
 
   <!-- Footer -->
-  <mat-grid-tile colspan="12"> Footer comp </mat-grid-tile>
-</mat-grid-list>
-<router-outlet> </router-outlet>
+  <div class="row">
+    <div class="col-12">
+      <!-- <app-footer></app-footer> -->
+      footer
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

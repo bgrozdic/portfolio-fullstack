@@ -1,0 +1,30 @@
+<div>
+  <h2>About me</h2>
+  <p>
+    I’m a fullstack developer currently working on enterprise applications, focusing on developing
+    new features and resolving bugs. Continuously improving my skills through both professional work
+    and personal projects.
+  </p>
+</div>
+@if (loading()) {
+  <div class="d-flex justify-content-center">
+    <mat-spinner></mat-spinner>
+  </div>
+} @else if (aboutForm.content().value().length > 0) {
+  <div>
+    <h2>
+      <span>About you</span>
+      <button class="ms-2" (click)="openDialog()" matButton="filled">
+        <mat-icon>edit</mat-icon> Edit
+      </button>
+    </h2>
+    <span>
+      {{ aboutForm.content().value() }}
+    </span>
+  </div>
+} @else {
+  <div>
+    <span>Feel free to explore and make your own about section.</span>
+    <button class="ms-2" matButton="filled" (click)="openDialog()">Try it!</button>
+  </div>
+}
