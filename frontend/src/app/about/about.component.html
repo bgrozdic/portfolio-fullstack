@@ -6,11 +6,12 @@
     and personal projects.
   </p>
 </div>
+
 @if (loading()) {
   <div class="d-flex justify-content-center">
     <mat-spinner></mat-spinner>
   </div>
-} @else if (aboutForm.content().value().length > 0) {
+} @else if (aboutForm.content().value().length > 0 && aboutForm.content().value() != null) {
   <div>
     <h2>
       <span>About you</span>

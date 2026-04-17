@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, switchMap } from 'rxjs';
 
 export interface About {
   id: string;
@@ -17,6 +17,8 @@ export class AboutService {
   }
 
   update(about: About): Observable<About> {
-    return this.http.put<About>(this.api, about);
+    return this.http
+      .put<About>(this.api, about)
+      .pipe(switchMap(() => this.http.get<About>(this.api)));
   }
 }

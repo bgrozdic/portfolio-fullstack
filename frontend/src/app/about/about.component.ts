@@ -8,10 +8,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { About, AboutService } from '../services/about.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { EMPTY, switchMap } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { form, maxLength } from '@angular/forms/signals';
-import { JsonPipe } from '@angular/common';
 import { SnackbarService } from '../services/snackbar.service';
 
 @Component({
